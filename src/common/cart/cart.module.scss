@@ -1,0 +1,61 @@
+@import "../../assets/styles/main.scss";
+
+.cart {
+    position: fixed;
+    background-color: var(--color-white);
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    transition: 0.3s ease-in-out;
+    z-index: 9;
+
+    &.active {
+        right: 0;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
+
+    .cartContent {
+        height: 100%;
+        font-family: var(--font-family-caudex);
+        display: grid;
+        grid-template-rows: 1fr auto;
+
+        .cartHeader {
+            overflow: auto;
+        }
+
+        .checkout {
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+
+            .subTotal {
+                display: grid;
+                grid-template-columns: 1fr auto;
+                gap: 10px;
+                margin-bottom: 12px;
+
+                h3 {
+                    @include cartText;
+                }
+            }
+
+            p {
+                margin-bottom: 12px;
+                @include cartTextSmall;
+                color: var(--font-color-secondary);
+            }
+
+            .checkoutButtons {
+                display: grid;
+                grid-template-rows: repeat(2, 1fr);
+                gap: 10px;
+            }
+        }
+    }
+}
