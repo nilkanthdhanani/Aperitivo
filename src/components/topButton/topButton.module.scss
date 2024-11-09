@@ -1,0 +1,14 @@
+@import "../../assets/styles/main.scss";
+
+.topButton {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    z-index: 9;
+    cursor: pointer;
+
+    @include breakpoint(md-max) {
+        display: block;
+    }
+}

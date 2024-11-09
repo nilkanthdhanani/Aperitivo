@@ -5,6 +5,7 @@ import "@/assets/styles/partials/_theming.scss";
 import "react-loading-skeleton/dist/skeleton.css";
 import Footer from "@/common/footer";
 import Header from "@/common/header";
+import TopButton from "@/components/topButton";
 // import CustomCursor from "@/components/CustomCursor";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <TopButton />
       </body>
     </html>
   );
