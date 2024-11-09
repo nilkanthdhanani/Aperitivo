@@ -2,7 +2,7 @@
 @import "typography";
 @import "variables";
 
-.heroTitle {
+.heroTitle, .friendsContent {
     button {
         padding: 10px 30px;
         @include buttonText;

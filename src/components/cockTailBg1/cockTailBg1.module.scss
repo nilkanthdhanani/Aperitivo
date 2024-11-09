@@ -1,0 +1,10 @@
+@import "../../assets/styles/main.scss";
+
+.cockTailBg1 {
+    width: 100%;
+    min-height: 1000px;
+    background-attachment: fixed;
+    background-image: url("../../assets/images/webp/cocktailBG.webp");
+    background-size: cover;
+    background-position: center;
+}

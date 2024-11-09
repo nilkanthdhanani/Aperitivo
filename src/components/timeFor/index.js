@@ -6,8 +6,8 @@ export default function TimeFor() {
             <div className={styles.timeForDiv1}></div>
             <div className={styles.timeForDiv2}>
                 <div className={styles.timeForContent}>
-                    <span>Time for Apéritivo</span>
-                    <h2>Expertly crafted with premium spirits and natural ingredients</h2>
+                    <h2>Time for Apéritivo</h2>
+                    <p>Expertly crafted with premium spirits and natural ingredients</p>
                 </div>
             </div>
         </section>

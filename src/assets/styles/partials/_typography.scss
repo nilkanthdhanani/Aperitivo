@@ -5,16 +5,16 @@
     font-weight: 400;
 }
 
-@mixin navText {
-    font-size: 16px;
-    line-height: 30px;
-    font-weight: 500;
-}
-
 @mixin cartText {
     font-size: 16px;
     line-height: 28px;
     font-weight: 400;
+}
+
+@mixin navText {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 500;
 }
 
 @mixin buttonText {
