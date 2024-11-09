@@ -1,5 +1,128 @@
 @import "../../assets/styles/main.scss";
 
 .footer {
-    
+    background: var(--bg-footer);
+
+    .footerDiv {
+        padding: 100px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px 20px;
+        text-align: center;
+
+        @include breakpoint(md-max) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint(sm-max) {
+            padding: 50px 0;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 40px;
+        } 
+
+        .footerContact {
+            @include breakpoint(md-max) {
+                order: 2;
+            }
+
+            h2 {
+                @include font30Light;
+                font-family: var(--font-family-caudex);
+                color: var(--font-yellow);
+            }
+
+            .footerMail {
+                margin: 15px 0 40px 0;
+
+                @include breakpoint(sm-max) {
+                    margin: 10px 0 20px 0;
+                }
+
+                a {
+                    display: block;
+                    @include cartText;
+                    font-weight: 300;
+                    font-family: var(--font-family-avenir);
+                    color: var(--font-yellow);
+                }
+            }
+
+            span {
+                display: block;
+                @include cartText;
+                font-weight: 300;
+                font-family: var(--font-family-avenir);
+                color: var(--font-yellow);
+            }
+        }
+
+        .footerLogo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @include breakpoint(md-max) {
+                order: 1;
+                grid-column: span 2;
+            }
+
+            @include breakpoint(sm-max) {
+                grid-column: span 1;
+            }
+
+            .logo {
+                a {
+                    display: block;
+                    user-select: none;
+                    @include logoTextFooter;
+                    color: var(--font-yellow);
+                    font-family: var(--font-family-caudex);
+
+                    @include breakpoint(sm-max) {
+                        font-size: 50px;
+                        line-height: 60px;
+                    }
+                }
+            }
+
+            .footerLink {
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                a {
+                    display: block;
+                    @include cartText;
+                    font-weight: 300;
+                    font-family: var(--font-family-avenir);
+                    color: var(--font-yellow);
+                }
+
+                .footerLinkDot {
+                    padding: 3px;
+                    border-radius: 50%;
+                    background: var(--font-yellow);
+                }
+            }
+        }
+    }
+
+    .copyRight {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        text-align: center;
+
+        p {
+            display: block;
+            @include cartText;
+            font-weight: 300;
+            font-family: var(--font-family-avenir);
+            color: var(--font-yellow);
+        }
+    }
 }

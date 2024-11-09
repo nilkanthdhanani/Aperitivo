@@ -1,13 +1,7 @@
 
-@mixin font30 {
-    font-size: 30px;
-    line-height: 40px;
-    font-weight: 600;
-}
-
-@mixin logoText {
-    font-size: 40px;
-    line-height: 52px;
+@mixin cartTextSmall {
+    font-size: 14px;
+    line-height: 20px;
     font-weight: 400;
 }
 
@@ -23,18 +17,6 @@
     font-weight: 400;
 }
 
-@mixin cartTextSmall {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-}
-
-@mixin heroText {
-    font-size: 126px;
-    line-height: 168px;
-    font-weight: 400;
-}
-
 @mixin buttonText {
     font-size: 16px;
     line-height: 28px;
@@ -45,4 +27,34 @@
     font-size: 24px;
     line-height: 30px;
     font-weight: 600;
+}
+
+@mixin font30 {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 600;
+}
+
+@mixin font30Light {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+}
+
+@mixin logoText {
+    font-size: 40px;
+    line-height: 52px;
+    font-weight: 400;
+}
+
+@mixin logoTextFooter {
+    font-size: 68px;
+    line-height: 90px;
+    font-weight: 400;
+}
+
+@mixin heroText {
+    font-size: 126px;
+    line-height: 168px;
+    font-weight: 400;
 }

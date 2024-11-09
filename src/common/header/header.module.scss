@@ -17,6 +17,7 @@
 
         .logo {
             a {
+                display: block;
                 user-select: none;
                 @include logoText;
                 color: var(--font-blue);
