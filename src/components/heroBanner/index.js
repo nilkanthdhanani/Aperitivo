@@ -10,6 +10,16 @@ import { useState, useEffect } from 'react';
 export default function HeroBanner() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY * -0.0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -17,18 +27,24 @@ export default function HeroBanner() {
       setTimeout(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % 5);
         setIsFading(false);
-      }, 500); // Time for the fade-out effect
+      }, 500);
     }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className={styles.heroBanner}>
+    <section
+      className={styles.heroBanner}
+      style={{
+        backgroundPositionY: `${scrollPosition}px`,
+      }}
+    >
       <div className={styles.heroBannerContent}>
         <div className={styles.heroBannerInner}>
           <div
-            className={`${styles.heroBannerImage} ${isFading ? styles.fadeOut : styles.fadeIn}`}
+            className={`${styles.heroBannerImage} ${isFading ? styles.fadeOut : styles.fadeIn
+              }`}
           >
             <Image
               src={[heroImg1, heroImg2, heroImg3, heroImg4, heroImg5][currentImageIndex]}

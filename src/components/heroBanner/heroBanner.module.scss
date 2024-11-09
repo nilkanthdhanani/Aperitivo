@@ -2,9 +2,11 @@
 
 .heroBanner {
     width: 100%;
-    background-image: url("../../assets/images/webp/heroBanner.webp");
+    background: fixed;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../assets/images/webp/heroBanner.webp");
     padding: 200px 0;
 
     .heroBannerContent {
