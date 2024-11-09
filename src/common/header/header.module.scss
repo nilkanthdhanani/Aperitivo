@@ -8,7 +8,7 @@
     width: 100%;
     background-color: var(--color-white);
     padding: 24px 0;
-    background-color: var(--header-bg);
+    background-color: var(--bg-header);
 
     .headerDiv {
         display: flex;
@@ -19,9 +19,9 @@
             a {
                 user-select: none;
                 @include logoText;
-                color: var(--font-color);
+                color: var(--font-blue);
                 font-family: var(--font-family-caudex);
-                
+
                 @include breakpoint(md-max) {
                     font-size: 30px;
                     line-height: 40px;
@@ -34,42 +34,44 @@
             align-items: center;
             position: relative;
 
-            a {
-                font-family: var(--font-family-avenir);
-                @include navText;
-                color: var(--font-color);
-                padding: 5px 15px;
-                position: relative;
-                display: flex;
-                align-items: center;
-                transition: all 0.5s ease-in-out;
-                animation-duration: 0.9s;
+            .navItem {
+                a {
+                    font-family: var(--font-family-avenir);
+                    @include navText;
+                    color: var(--font-blue);
+                    padding: 5px 15px;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    transition: all 0.5s ease-in-out;
+                    animation-duration: 0.9s;
 
-                @include breakpoint(lg-max) {
-                    padding: 5px 10px;
-                }
+                    @include breakpoint(lg-max) {
+                        padding: 5px 10px;
+                    }
 
-                @include breakpoint(md-max) {
-                    display: none;
-                }
-
-                svg {
-                    margin-right: 7px;
-                    fill: var(--font-color);
-                }
-
-                &:hover {
-                    color: var(--font-hover);
-                    animation-name: pulse79;
-                    animation-iteration-count: infinite;
+                    @include breakpoint(md-max) {
+                        display: none;
+                    }
 
                     svg {
-                        fill: var(--font-hover);
+                        margin-right: 7px;
+                        fill: var(--font-blue);
                     }
-                }
 
-                &.active {
-                    color: var(--font-hover);
+                    &:hover {
+                        color: var(--font-hover);
+                        animation-name: pulse79;
+                        animation-iteration-count: infinite;
+
+                        svg {
+                            fill: var(--font-hover);
+                        }
+                    }
+
+                    &.active {
+                        color: var(--font-hover);
+                    }
                 }
             }
 
@@ -93,13 +95,13 @@
                     transform: translate(50%, -50%);
                     font-size: 10px;
                     font-family: var(--font-family-avenir);
-                    color: var(--font-color);
+                    color: var(--font-blue);
                     margin-top: 2px;
                     transition: all 0.5s ease-in-out;
                 }
 
                 svg {
-                    fill: var(--font-color);
+                    fill: var(--font-blue);
                     transition: all 0.5s ease-in-out;
                 }
 
@@ -131,7 +133,7 @@
 
                 span {
                     position: absolute;
-                    border-bottom: 3px solid var(--font-color);
+                    border-bottom: 3px solid var(--main-blue);
                     border-radius: 4px;
                     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
                     left: 25%;

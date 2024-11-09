@@ -2,7 +2,7 @@
 
 .sidebar {
     position: fixed;
-    background-color: var(--sidebar-bg);
+    background-color: var(--bg-sidebar);
     width: 100%;
     height: 100vh;
     top: 0;
@@ -22,7 +22,7 @@
         a {
             user-select: none;
             @include logoText;
-            color: var(--font-color);
+            color: var(--font-blue);
             font-family: var(--font-family-caudex);
 
             @include breakpoint(md-max) {
@@ -40,7 +40,7 @@
         a {
             font-family: var(--font-family-avenir);
             @include navText;
-            color: var(--font-color);
+            color: var(--font-blue);
             padding: 10px;
             position: relative;
             display: flex;
@@ -51,7 +51,7 @@
 
             svg {
                 margin-right: 7px;
-                fill: var(--font-color);
+                fill: var(--font-blue);
             }
 
             &:hover {

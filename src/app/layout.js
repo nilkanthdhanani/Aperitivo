@@ -5,6 +5,7 @@ import "@/assets/styles/partials/_theming.scss";
 import "react-loading-skeleton/dist/skeleton.css";
 import Footer from "@/common/footer";
 import Header from "@/common/header";
+// import CustomCursor from "@/components/CustomCursor";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="./favicon.ico" />
       </head>
       <body className={inter.className}>
+        {/* <CustomCursor /> */}
         <Header />
         {children}
         <Footer />

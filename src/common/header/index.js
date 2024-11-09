@@ -4,15 +4,13 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './header.module.scss';
 import UserIco from '@/assets/images/svg/userIco';
-import CartIco from '@/assets/images/svg/cartIco';
 import { useState, useEffect } from 'react';
 import Sidebar from '../sidebar';
-import Cart from '../cart';
+import CartIco from '@/assets/images/svg/cartIco';
 
 export default function Header() {
   const pathname = usePathname();
   const [isActive, setIsActive] = useState(false);
-  const [isCartOpen, setIsCartOpen] = useState(false);
 
   useEffect(() => {
     if (isActive) {
@@ -21,24 +19,13 @@ export default function Header() {
       document.body.classList.remove('no-scroll');
     }
 
-    if (isCartOpen) {
-      document.body.classList.add('no-scroll2');
-    } else {
-      document.body.classList.remove('no-scroll2');
-    }
-
     return () => {
       document.body.classList.remove('no-scroll');
-      document.body.classList.remove('no-scroll2');
     };
-  }, [isActive, isCartOpen]);
+  }, [isActive]);
 
   const toggleMenu = () => {
     setIsActive(!isActive);
-  };
-
-  const toggleCart = () => {
-    setIsCartOpen(!isCartOpen);
   };
 
   return (
@@ -49,16 +36,28 @@ export default function Header() {
             <Link href={"/"} className={pathname === '/' ? styles.active : ''}>Apéritivo</Link>
           </div>
           <nav>
-            <Link href={"/our-cocktails"} className={pathname === '/our-cocktails' ? styles.active : ''}>Our Cocktails</Link>
-            <Link href={"/order-online"} className={pathname === '/order-online' ? styles.active : ''}>Order Online</Link>
-            <Link href={"/about"} className={pathname === '/about' ? styles.active : ''}>About</Link>
-            <Link href={"/about#contact"}>Contact</Link>
-            <Link href={"/login"}><UserIco /> Log In</Link>
-            <div className={styles.cart} onClick={toggleCart}>
-              <CartIco />
-              <span>0</span>
+            <div className={styles.navItem}>
+              <Link href={"/our-cocktails"} className={pathname === '/our-cocktails' ? styles.active : ''}>Our Cocktails</Link>
             </div>
-            <div 
+            <div className={styles.navItem}>
+              <Link href={"/order-online"} className={pathname === '/order-online' ? styles.active : ''}>Order Online</Link>
+            </div>
+            <div className={styles.navItem}>
+              <Link href={"/about"} className={pathname === '/about' ? styles.active : ''}>About</Link>
+            </div>
+            <div className={styles.navItem}>
+              <Link href={"/about#contact"}>Contact</Link>
+            </div>
+            <div className={styles.navItem}>
+              <Link href={"/login"}><UserIco /> Log In</Link>
+            </div>
+            <Link href={"/cart"} className={pathname === '/cart' ? styles.active : ''}>
+              <div className={styles.cart}>
+                <CartIco />
+                <span>0</span>
+              </div>
+            </Link>
+            <div
               className={`${styles.menuIcon} ${isActive ? styles.active : ''}`}
               onClick={toggleMenu}>
               <span></span>
@@ -69,7 +68,6 @@ export default function Header() {
         </div>
       </div>
       <Sidebar isActive={isActive} toggleMenu={toggleMenu} />
-      <Cart isOpen={isCartOpen} toggleCart={toggleCart} />
-    </header>
+    </header >
   );
 }
