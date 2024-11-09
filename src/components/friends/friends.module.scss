@@ -4,6 +4,10 @@
     padding: 100px 0 20px 0;
     background-color: var(--main-yellow);
 
+    @include breakpoint(sm-max) {
+        padding: 50px 0 20px 0;
+    }
+
     .friendsContent {
         display: flex;
         align-items: center;
@@ -23,6 +27,11 @@
             font-family: var(--font-family-avenir);
             color: var(--font-blue);
             margin-top: 30px;
+
+            @include breakpoint(sm-max) {
+                font-size: 20px;
+                line-height: 26px;
+            }
         }
 
         p {
@@ -33,6 +42,11 @@
             font-family: var(--font-family-caudex);
             color: var(--font-blue);
             margin: 20px 0 50px 0;
+
+            @include breakpoint(sm-max) {
+                font-size: 24px;
+                line-height: 30px;
+            }
         }
     }
 }

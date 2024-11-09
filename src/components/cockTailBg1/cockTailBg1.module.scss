@@ -7,4 +7,12 @@
     background-image: url("../../assets/images/webp/cocktailBG.webp");
     background-size: cover;
     background-position: center;
+
+    @include breakpoint(md-max) {
+        min-height: 700px;
+    }
+
+    @include breakpoint(sm-max) {
+        min-height: 500px;
+    }
 }

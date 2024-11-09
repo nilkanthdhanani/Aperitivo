@@ -4,12 +4,21 @@
     padding: 100px 0;
     background-color: var(--main-yellow);
 
+    @include breakpoint(sm-max) {
+        padding: 50px 0;
+    }
+
     h2 {
         word-break: break-word;
         text-align: center;
         @include font24;
         font-family: var(--font-family-avenir);
         color: var(--font-blue);
+
+        @include breakpoint(sm-max) {
+            font-size: 20px;
+            line-height: 26px;
+        }
     }
 
     .clockGrid {
@@ -40,6 +49,11 @@
                 font-family: var(--font-family-caudex);
                 color: var(--font-blue);
                 margin-top: 20px;
+
+                @include breakpoint(sm-max) {
+                    font-size: 24px;
+                    line-height: 30px;
+                }
             }
         }
     }

@@ -24,6 +24,19 @@ export default function Header() {
     };
   }, [isActive]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768 && isActive) {
+        setIsActive(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isActive]);
+
   const toggleMenu = () => {
     setIsActive(!isActive);
   };
@@ -68,6 +81,6 @@ export default function Header() {
         </div>
       </div>
       <Sidebar isActive={isActive} toggleMenu={toggleMenu} />
-    </header >
+    </header>
   );
 }
