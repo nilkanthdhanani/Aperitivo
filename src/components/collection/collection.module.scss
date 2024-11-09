@@ -36,10 +36,23 @@
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 50px;
 
+        @include breakpoint(lg-max) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint(md-max) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
         .collectionGridDiv {
             .collectionGridImg {
                 border-radius: 999px;
                 overflow: hidden;
+
+                @include breakpoint(md-max) {
+                    max-width: 450px;
+                    margin: 0 auto;
+                }
 
                 img {
                     display: block;

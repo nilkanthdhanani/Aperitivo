@@ -5,10 +5,20 @@
     min-height: 730px;
     grid-template-columns: repeat(2, 1fr);
 
+    @include breakpoint(lg-max) {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
     .timeForDiv1 {
         background-image: url("../../assets/images/webp/timeForBG1.webp");
         background-size: cover;
         background-position: center;
+
+        @include breakpoint(lg-max) {
+            order: 2;
+            min-height: 700px;
+        }
     }
 
     .timeForDiv2 {
@@ -16,6 +26,10 @@
         background-size: cover;
         background-position: center;
         position: relative;
+
+        @include breakpoint(lg-max) {
+            min-height: 700px;
+        }
 
         .timeForContent {
             position: absolute;

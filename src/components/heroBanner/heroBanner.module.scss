@@ -9,6 +9,10 @@
     background-image: url("../../assets/images/webp/heroBanner.webp");
     padding: 200px 0;
 
+    @include breakpoint(lg-max) {   
+        padding: 150px 0 100px 0;
+    }
+
     .heroBannerContent {
         padding: 0 30px;
         max-width: 1100px;
@@ -16,10 +20,18 @@
         display: grid;
         grid-template-columns: 535px 1fr;
 
+        @include breakpoint(lg-max) {
+            grid-template-columns: 1fr;
+        }
+
         .heroBannerImage {
             border-radius: 999px;
             overflow: hidden;
             transition: 0.5s ease-in-out; transition: opacity 0.5s ease-in-out;
+
+            @include breakpoint(lg-max) {
+                max-width: 535px;
+            }
 
             &.fadeIn {
               opacity: 1;
@@ -52,11 +64,23 @@
                 flex-direction: column;
                 align-items: flex-end;
 
+                @include breakpoint(lg-max) {
+                    position: relative;
+                    right: 0;
+                    top: 0;
+                    width: 100%;
+                    margin-top: -15%;
+                }
+
                 h1 {
                     @include heroText;
                     font-family: var(--font-family-caudex);
                     color: var(--font-red);
                     word-break: break-word;
+
+                    @include breakpoint(md-max) {
+                        font-size:110px;
+                    }
                 }
 
                 p {

@@ -18,6 +18,11 @@
         gap: 30px;
         margin-top: 50px;
 
+        @include breakpoint(md-max) {
+            flex-direction: column;
+            align-items: center;
+        }
+
         .clockGridBox {
             max-width: 320px;
             display: flex;
