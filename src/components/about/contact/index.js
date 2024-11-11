@@ -66,49 +66,54 @@ export default function Contact() {
                     <form onSubmit={handleSubmit} noValidate>
                         <div className={styles.contactInputGrid}>
                             <div className={styles.contactInput}>
-                                <label>First name *</label>
+                                <label htmlFor='firstName'>First name *</label>
                                 <input
                                     type='text'
                                     name='firstName'
+                                    id='firstName'
                                     value={formData.firstName}
                                     onChange={handleChange}
                                 />
                                 {errors.firstName && <span><InputErrorIco /> {errors.firstName}</span>}
                             </div>
                             <div className={styles.contactInput}>
-                                <label>Last name *</label>
+                                <label htmlFor='lastName'>Last name *</label>
                                 <input
                                     type='text'
                                     name='lastName'
+                                    id='lastName'
                                     value={formData.lastName}
                                     onChange={handleChange}
                                 />
                                 {errors.lastName && <span><InputErrorIco /> {errors.lastName}</span>}
                             </div>
                             <div className={styles.contactInput}>
-                                <label>Email *</label>
+                                <label htmlFor='email'>Email *</label>
                                 <input
                                     type='email'
                                     name='email'
+                                    id='email'
                                     value={formData.email}
                                     onChange={handleChange}
                                 />
                                 {errors.email && <span><InputErrorIco /> {errors.email}</span>}
                             </div>
                             <div className={styles.contactInput}>
-                                <label>Subject</label>
+                                <label htmlFor='subject'>Subject</label>
                                 <input
                                     type='text'
                                     name='subject'
+                                    id='subject'
                                     value={formData.subject}
                                     onChange={handleChange}
                                 />
                             </div>
                         </div>
                         <div className={styles.contactInput}>
-                            <label>Message</label>
+                            <label htmlFor='message'>Message</label>
                             <textarea
                                 name='message'
+                                id='message'
                                 rows={4}
                                 value={formData.message}
                                 onChange={handleChange}
