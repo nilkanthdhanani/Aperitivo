@@ -9,196 +9,206 @@
     background-color: var(--color-white);
     padding: 24px 0;
     background-color: var(--bg-header);
-
-    .headerDiv {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        .logo {
-            a {
-                display: block;
-                user-select: none;
-                @include logoText;
-                color: var(--font-blue);
-                font-family: var(--font-family-caudex);
-
-                @include breakpoint(md-max) {
-                    font-size: 30px;
-                    line-height: 40px;
-                }
-            }
-        }
-
-        nav {
-            display: flex;
-            position: relative;
-
-            .navItem {
-                a {
-                    margin: 0;
-                    font-family: var(--font-family-avenir);
-                    @include navText;
-                    color: var(--font-blue);
-                    padding: 5px 15px;
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    transition: all 0.5s ease-in-out;
-                    animation-duration: 0.9s;
-
-                    @include breakpoint(lg-max) {
-                        padding: 5px 10px;
-                    }
-
-                    @include breakpoint(md-max) {
-                        display: none;
-                    }
-
-                    svg {
-                        margin-right: 7px;
-                        fill: var(--font-blue);
-                    }
-
-                    &:hover {
-                        color: var(--font-hover);
-                        animation-name: pulse79;
-                        animation-iteration-count: infinite;
-
-                        svg {
-                            fill: var(--font-hover);
-                        }
-                    }
-
-                    &.active {
-                        color: var(--font-hover);
-                    }
-                }
-            }
-
-            a {
-                margin-left: 10px;
-
-                .cart {
-                    height: 100%;
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    cursor: pointer;
-
-                    @include breakpoint(lg-max) {
-                        margin-left: 5px;
-                    }
-
-                    @include breakpoint(md-max) {
-                        margin-right: 55px;
-                    }
-
-                    span {
-                        position: absolute;
-                        font-size: 10px;
-                        font-family: var(--font-family-avenir);
-                        color: var(--font-blue);
-                        margin-top: 5px;
-                        transition: all 0.5s ease-in-out;
-                    }
-
-                    svg {
-                        margin-bottom: 3px;
-                        fill: var(--font-blue);
-                        transition: all 0.5s ease-in-out;
-                    }
-
-                    &:hover {
-                        span {
-                            color: var(--font-hover);
-                        }
-
-                        svg {
-                            fill: var(--font-hover);
-                        }
-                    }
-                }
-            }
-
-            .menuIcon {
-                position: fixed;
-                top: 24px;
-                right: 10px;
-                z-index: 99;
-                display: none;
-                cursor: pointer;
-                width: 55px;
-                height: 40px;
-                background: transparent;
-                transition: all 0.4s ease;
-
-                @include breakpoint(md-max) {
-                    display: block;
-                }
-
-                span {
-                    position: absolute;
-                    border-bottom: 3px solid var(--main-blue);
-                    border-radius: 4px;
-                    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                    left: 25%;
-                    width: 50%;
-
-                    &:nth-child(1) {
-                        top: 10px;
-                    }
-
-                    &:nth-child(2) {
-                        top: 50%;
-                        transform: translateY(-50%);
-                    }
-
-                    &:nth-child(3) {
-                        bottom: 11px;
-                    }
-                }
-
-                &:hover {
-                    span {
-                        border-bottom: 3px solid var(--font-hover);
-
-                        &:nth-child(2) {
-                            width: 60%;
-                        }
-
-                        &:nth-child(3) {
-                            width: 30%;
-                        }
-                    }
-                }
-
-                &.active {
-                    transform: rotate(180deg);
-
-                    span {
-                        width: 50% !important;
-
-                        &:nth-child(1) {
-                            top: 50%;
-                            transform: translateY(-50%) rotate(45deg);
-                            transform-origin: center;
-                        }
-
-                        &:nth-child(2) {
-                            opacity: 0;
-                            transform: translateX(100%);
-                        }
-
-                        &:nth-child(3) {
-                            bottom: 50%;
-                            transform: translateY(50%) rotate(-45deg);
-                            transform-origin: center;
-                        }
-                    }
-                }
-            }
-        }
+    transition: transform 0.3s ease;
+  
+    &.show {
+      transform: translateY(0);
     }
-}
+  
+    &.hide {
+      transform: translateY(-100%);
+    }
+  
+    .headerDiv {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      .logo {
+        a {
+          display: block;
+          user-select: none;
+          @include logoText;
+          color: var(--font-blue);
+          font-family: var(--font-family-caudex);
+  
+          @include breakpoint(md-max) {
+            font-size: 30px;
+            line-height: 40px;
+          }
+        }
+      }
+  
+      nav {
+        display: flex;
+        position: relative;
+  
+        .navItem {
+          a {
+            margin: 0;
+            font-family: var(--font-family-avenir);
+            @include navText;
+            color: var(--font-blue);
+            padding: 5px 15px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            transition: all 0.5s ease-in-out;
+            animation-duration: 0.9s;
+  
+            @include breakpoint(lg-max) {
+              padding: 5px 10px;
+            }
+  
+            @include breakpoint(md-max) {
+              display: none;
+            }
+  
+            svg {
+              margin-right: 7px;
+              fill: var(--font-blue);
+            }
+  
+            &:hover {
+              color: var(--font-hover);
+              animation-name: pulse79;
+              animation-iteration-count: infinite;
+  
+              svg {
+                fill: var(--font-hover);
+              }
+            }
+  
+            &.active {
+              color: var(--font-hover);
+            }
+          }
+        }
+  
+        a {
+          margin-left: 10px;
+  
+          .cart {
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+  
+            @include breakpoint(lg-max) {
+              margin-left: 5px;
+            }
+  
+            @include breakpoint(md-max) {
+              margin-right: 55px;
+            }
+  
+            span {
+              position: absolute;
+              font-size: 10px;
+              font-family: var(--font-family-avenir);
+              color: var(--font-blue);
+              margin-top: 5px;
+              transition: all 0.5s ease-in-out;
+            }
+  
+            svg {
+              margin-bottom: 3px;
+              fill: var(--font-blue);
+              transition: all 0.5s ease-in-out;
+            }
+  
+            &:hover {
+              span {
+                color: var(--font-hover);
+              }
+  
+              svg {
+                fill: var(--font-hover);
+              }
+            }
+          }
+        }
+  
+        .menuIcon {
+          position: fixed;
+          top: 24px;
+          right: 10px;
+          z-index: 99;
+          display: none;
+          cursor: pointer;
+          width: 55px;
+          height: 40px;
+          background: transparent;
+          transition: all 0.4s ease;
+  
+          @include breakpoint(md-max) {
+            display: block;
+          }
+  
+          span {
+            position: absolute;
+            border-bottom: 3px solid var(--main-blue);
+            border-radius: 4px;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            left: 25%;
+            width: 50%;
+  
+            &:nth-child(1) {
+              top: 10px;
+            }
+  
+            &:nth-child(2) {
+              top: 50%;
+              transform: translateY(-50%);
+            }
+  
+            &:nth-child(3) {
+              bottom: 11px;
+            }
+          }
+  
+          &:hover {
+            span {
+              border-bottom: 3px solid var(--font-hover);
+  
+              &:nth-child(2) {
+                width: 60%;
+              }
+  
+              &:nth-child(3) {
+                width: 30%;
+              }
+            }
+          }
+  
+          &.active {
+            transform: rotate(180deg);
+  
+            span {
+              width: 50% !important;
+  
+              &:nth-child(1) {
+                top: 50%;
+                transform: translateY(-50%) rotate(45deg);
+                transform-origin: center;
+              }
+  
+              &:nth-child(2) {
+                opacity: 0;
+                transform: translateX(100%);
+              }
+  
+              &:nth-child(3) {
+                bottom: 50%;
+                transform: translateY(50%) rotate(-45deg);
+                transform-origin: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

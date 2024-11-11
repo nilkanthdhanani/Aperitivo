@@ -11,6 +11,8 @@ import CartIco from '@/assets/images/svg/cartIco';
 export default function Header() {
   const pathname = usePathname();
   const [isActive, setIsActive] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
+  let lastScrollTop = 0;
 
   useEffect(() => {
     if (isActive) {
@@ -41,8 +43,25 @@ export default function Header() {
     setIsActive(!isActive);
   };
 
+  const handleScroll = () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+      setShowHeader(false); // Hide header on scroll down
+    } else {
+      setShowHeader(true); // Show header on scroll up
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${showHeader ? styles.show : styles.hide}`}>
       <div className="container">
         <div className={styles.headerDiv}>
           <div className={styles.logo}>
