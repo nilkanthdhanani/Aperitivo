@@ -13,7 +13,7 @@ export default function Friends() {
                     <h2>Apéritivo with Friends</h2>
                     <p>Raise a glass with friends and savor every moment with our unique cocktails, designed to bring people together. From refreshing classics to bold new flavors, each drink is crafted to turn any gathering into a celebration.</p>
                     <Link href={'/about'}>
-                        <button type="button">Read More</button>
+                        <button type="button">Apéritivo Information</button>
                     </Link>
                 </div>
             </div>
