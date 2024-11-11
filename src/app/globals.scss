@@ -69,3 +69,9 @@ textarea {
     transform: translate(-50%, -50%);
     transition: transform 0.15s ease;
 }
+
+@media (max-width: 576px) {
+    h1,h2,h3,h4,h5,h6 {
+        word-break: break-word;
+    }   
+}

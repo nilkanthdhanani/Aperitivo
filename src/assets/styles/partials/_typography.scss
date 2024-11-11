@@ -5,6 +5,12 @@
     font-weight: 400;
 }
 
+@mixin font16 {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
 @mixin cartText {
     font-size: 16px;
     line-height: 28px;
@@ -38,6 +44,12 @@
 @mixin font30Light {
     font-size: 30px;
     line-height: 40px;
+    font-weight: 400;
+}
+
+@mixin font35 {
+    font-size: 35px;
+    line-height: 45px;
     font-weight: 400;
 }
 

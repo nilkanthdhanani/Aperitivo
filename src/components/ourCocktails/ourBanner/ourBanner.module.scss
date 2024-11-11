@@ -6,10 +6,20 @@
     flex-direction: column;
     align-items: center;
 
+    @include breakpoint(sm-max) {
+        padding: 100px 0 50px 0;
+    }
+
     h1 {
         @include contentHead;
         font-family: var(--font-family-caudex);
         color: var(--font-blue);
         margin-top: 20px;
+        text-align: center;
+
+        @include breakpoint(sm-max) {
+            font-size: 30px;
+            line-height: 40px;
+        }
     }
 }
