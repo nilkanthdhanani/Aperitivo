@@ -55,7 +55,7 @@ export default function Contact() {
     };
 
     return (
-        <section className={styles.contact}>
+        <section className={styles.contact} id='contact'>
             <div className={styles.contactDiv1}>
                 <h2>Custom Services</h2>
                 <p>Tailor your cocktail experience with our custom services, designed to meet your unique taste and event preferences.</p>
