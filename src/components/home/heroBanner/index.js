@@ -6,6 +6,7 @@ import heroImg3 from '@/assets/images/webp/heroImg3.webp';
 import heroImg4 from '@/assets/images/webp/heroImg4.webp';
 import heroImg5 from '@/assets/images/webp/heroImg5.webp';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function HeroBanner() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -57,7 +58,9 @@ export default function HeroBanner() {
           <div className={styles.heroTitle}>
             <h1>Apéritivo</h1>
             <p>Finest Cocktails. Delivered</p>
-            <button type="button">Order Online</button>
+            <Link href={'/order-online'}>
+              <button type="button">Order Online</button>
+            </Link>
           </div>
         </div>
       </div>

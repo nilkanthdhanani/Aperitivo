@@ -1,0 +1,57 @@
+@import "../../../assets/styles/main.scss";
+
+.heart {
+    padding: 200px 20px;
+    background-image: url("../../../assets/images/webp/aboutBg.webp");
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    @include breakpoint(sm-max) {
+        padding: 50px 20px;
+    }
+
+    .heartContent {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+
+        h2 {
+            @include font24;
+            font-family: var(--font-family-avenir);
+            color: var(--font-yellow);
+            max-width: 600px;
+
+            @include breakpoint(sm-max) {
+                font-size: 20px;
+                line-height: 26px;
+            }
+        }
+        
+        p {
+            @include font30;
+            font-family: var(--font-family-caudex);
+            color: var(--font-yellow);
+            max-width: 600px;
+
+            @include breakpoint(sm-max) {
+                font-size: 24px;
+                line-height: 30px;
+            }
+        }
+    }
+}
