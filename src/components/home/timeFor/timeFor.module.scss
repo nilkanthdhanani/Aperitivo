@@ -1,4 +1,4 @@
-@import "../../assets/styles/main.scss";
+@import "../../../assets/styles/main.scss";
 
 .timeFor {
     display: grid;
@@ -11,7 +11,7 @@
     }
 
     .timeForDiv1 {
-        background-image: url("../../assets/images/webp/timeForBG1.webp");
+        background-image: url("../../../assets/images/webp/timeForBG1.webp");
         background-size: cover;
         background-position: center;
 
@@ -26,7 +26,7 @@
     }
 
     .timeForDiv2 {
-        background-image: url("../../assets/images/webp/timeForBG2.webp");
+        background-image: url("../../../assets/images/webp/timeForBG2.webp");
         background-size: cover;
         background-position: center;
         position: relative;

@@ -1,4 +1,4 @@
-@import "../../assets/styles/main.scss";
+@import "../../../assets/styles/main.scss";
 
 .heroBanner {
     width: 100%;
@@ -6,7 +6,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("../../assets/images/webp/heroBanner.webp");
+    background-image: url("../../../assets/images/webp/heroBanner.webp");
     padding: 200px 0;
 
     @include breakpoint(lg-max) {   

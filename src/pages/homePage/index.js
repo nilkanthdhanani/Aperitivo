@@ -1,10 +1,10 @@
-import Clock from "@/components/clock";
-import CockTailBg1 from "@/components/cockTailBg1";
-import CockTailBg2 from "@/components/cockTailBg2";
-import Collection from "@/components/collection";
-import Friends from "@/components/friends";
-import HeroBanner from "@/components/heroBanner";
-import TimeFor from "@/components/timeFor";
+import Clock from "@/components/home/clock";
+import CockTailBg1 from "@/components/home/cockTailBg1";
+import CockTailBg2 from "@/components/home/cockTailBg2";
+import Collection from "@/components/home/collection";
+import Friends from "@/components/home/friends";
+import HeroBanner from "@/components/home/heroBanner";
+import TimeFor from "@/components/home/timeFor";
 
 export default function HomePage() {
     return (

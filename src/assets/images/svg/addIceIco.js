@@ -1,6 +1,6 @@
 
 
-const AddIce = () => (
+const AddIceIco = () => (
     <svg preserveAspectRatio="xMidYMid meet" data-bbox="34.8 12 130.4 176.1" viewBox="34.8 12 130.4 176.1" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label="">
         <g>
             <path d="M100 188.1c-36 0-65.2-29.3-65.2-65.2V77.2c0-36 29.3-65.2 65.2-65.2s65.2 29.3 65.2 65.2v45.7c0 35.9-29.2 65.2-65.2 65.2zm0-175.2c-35.4 0-64.2 28.8-64.2 64.2v45.7c0 35.4 28.8 64.2 64.2 64.2 35.4 0 64.2-28.8 64.2-64.2V77.2c0-35.5-28.8-64.3-64.2-64.3z" fill="#002c5d" data-color="1"></path>
@@ -11,4 +11,4 @@ const AddIce = () => (
     </svg>
 );
 
-export default AddIce;
+export default AddIceIco;

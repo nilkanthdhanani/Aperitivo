@@ -47,6 +47,12 @@
     font-weight: 400;
 }
 
+@mixin contentHead {
+    font-size: 60px;
+    line-height: 48px;
+    font-weight: 400;
+}
+
 @mixin logoTextFooter {
     font-size: 68px;
     line-height: 90px;

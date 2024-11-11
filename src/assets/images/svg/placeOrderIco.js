@@ -1,6 +1,6 @@
 
 
-const PlaceOrder = () => (
+const PlaceOrderIco = () => (
     <svg preserveAspectRatio="xMidYMid meet" data-bbox="34.8 12 130.4 176.1" viewBox="34.8 12 130.4 176.1" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label="">
         <g>
             <path d="M65.3 101.1s2.3-16.2 5.4-21l-7.3-9.2 5 8.2-14.7-11.8 14 13.9L48.8 75l17.9 8.6-19.5-1.1 18.3 3.6-19.9.1L65 87.8s-19.3 3-18.9 3c.4 0 18-.1 18-.1l-18.7 4.6L63.9 93s-9.6 5.3-9.2 5.2 9.6-3.3 9.6-3.3l-7.6 7.4 7.7-5.3-3.9 7.4 3.7-5s-.7 5.3-.4 4.9c.3-.5 1.5-3.2 1.5-3.2z" fill="#002c5d" data-color="1"></path>
@@ -36,4 +36,4 @@ const PlaceOrder = () => (
     </svg>
 );
 
-export default PlaceOrder;
+export default PlaceOrderIco;

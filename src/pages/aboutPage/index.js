@@ -1,5 +1,5 @@
-import AboutBanner from "@/components/aboutBanner";
-import Contact from "@/components/contact";
+import AboutBanner from "@/components/about/aboutBanner";
+import Contact from "@/components/about/contact";
 
 export default function AboutPage() {
     return (

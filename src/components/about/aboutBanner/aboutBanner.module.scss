@@ -1,0 +1,15 @@
+@import "../../../assets/styles/main.scss";
+
+.aboutBanner {
+    padding: 200px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        @include contentHead;
+        font-family: var(--font-family-caudex);
+        color: var(--font-blue);
+        margin-top: 20px;
+    }
+}
