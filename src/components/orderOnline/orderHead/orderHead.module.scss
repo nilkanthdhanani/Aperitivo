@@ -1,0 +1,44 @@
+@import "../../../assets/styles/main.scss";
+
+.orderHead {
+    margin-top: 100px;
+    padding: 50px 0;
+
+    h1 {
+        @include orderHead;
+        font-family: var(--font-family-caudex);
+        color: var(--font-blue);
+    }
+
+    p {
+        @include font16;
+        font-family: var(--font-family-avenir);
+        color: var(--font-blue);
+        margin: 10px 0 20px 0;
+    }
+
+    .orderMain {
+        margin: 40px 0 20px 0;
+    }
+
+    .orderDetails {
+        .pickupDetails, .deliveryDetails {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .detailsTime {
+            display: flex;
+            gap: 7px;
+
+            svg {
+                margin-top: 2px;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}

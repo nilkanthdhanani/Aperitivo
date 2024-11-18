@@ -1,0 +1,119 @@
+@import "../../../assets/styles/main.scss";
+
+.cocktails {
+    padding-bottom: 50px;
+
+    h2 {
+        @include font35;
+        color: var(--font-blue);
+        font-family: var(--font-family-caudex);
+        margin-bottom: 20px;
+    }
+
+    .cocktailsTrack {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+
+        .cocktailsTrackList {
+            display: flex;
+            align-items: center;
+
+            a {
+                display: block;
+                padding: 14px;
+                border-bottom: 2px solid rgba(0, 44, 93, 0.3);
+                @include font16;
+                font-family: var(--font-family-caudex);
+                color: var(--color-black);
+
+                &:hover {
+                    color: var(--font-blue);
+                    border-bottom: 2px solid var(--main-blue);
+                }
+
+                &.active {
+                    color: var(--font-blue);
+                    border-bottom: 2px solid var(--main-blue);
+                }
+            }
+        }
+    }
+
+    .cocktailsMian {
+        margin-bottom: 50px;
+        
+        h3 {
+            @include font24Light;
+            font-family: var(--font-family-caudex);
+            color: var(--font-blue);
+            margin-bottom: 20px;
+        }
+
+        .cocktailsMianList {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px 30px;
+
+            .cocktailsListBox {
+                padding: 20px;
+                border: 1px solid var(--border-color);
+                border-radius: 15px;
+                display: grid;
+                grid-template-columns: 1fr 160px;
+                gap: 20px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                
+                &:hover {
+                    transform: scale(1.02);
+                    background-color: #ffc100;
+                }
+
+                .cocktailsListBoxTitle {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 20px;
+
+                    h4 {
+                        @include buttonText;
+                        font-family: var(--font-family-caudex);
+                        color: var(--font-blue-secondary);
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        @include cartTextSmall;
+                        font-family: var(--font-family-avenir);
+                        color: var(--font-blue-secondary);
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    span {
+                        display: block;
+                        @include buttonText;
+                        font-family: var(--font-family-caudex);
+                        color: var(--font-blue-secondary);
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 1 / 1;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+}

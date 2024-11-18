@@ -1,0 +1,105 @@
+@import "../../../assets/styles/main.scss";
+
+.DetailModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 50px 20px;
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
+
+    .DetailModalContent {
+        background: #fff;
+        border-radius: 20px;
+        max-width: 600px;
+        max-height: 100%;
+        position: relative;
+        overflow: auto;
+
+        .closeButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: flex-end;
+            cursor: pointer;
+
+            svg {
+                border: 1px solid var(--border-color);
+                border-radius: 50%;
+                background-color: var(--color-white);
+                padding: 7px;
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .DetailModallBody {
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+                max-height: 400px;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .DetailModallContent {
+                padding: 20px;
+                text-align: center;
+
+                h3 {
+                    @include font24Light;
+                    font-family: var(--font-family-caudex);
+                    color: var(--font-blue);
+                }
+
+                p {
+                    @include cartTextSmall;
+                    font-family: var(--font-family-avenir);
+                    color: var(--font-blue-secondary);
+                    margin: 20px 0 20px 0;
+                }
+
+                .quantityButtons {
+                    max-width: 120px;
+                    margin: 0 auto 20px auto;
+                    border: 1px solid var(--border-color);
+                    display: flex;
+
+                    button {
+                        padding: 7px 14px;
+                        background-color: transparent;
+                        border: none;
+                        @include font20;
+                        cursor: pointer;
+                    }
+
+                    input {
+                        width: 100%;
+                        background-color: transparent;
+                        border: none;
+                        text-align: center;
+                        @include cartTextSmall;
+                        font-family: var(--font-family-avenir);
+                        color: var(--font-blue-secondary);
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

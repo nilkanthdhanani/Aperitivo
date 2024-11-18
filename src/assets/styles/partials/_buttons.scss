@@ -2,7 +2,9 @@
 @import "typography";
 @import "variables";
 
-.heroTitle, .friendsContent, .doorStepDiv1 {
+.heroTitle,
+.friendsContent,
+.doorStepDiv1 {
     button {
         padding: 10px 30px;
         @include buttonText;
@@ -39,6 +41,138 @@
             background-color: transparent;
             color: var(--font-blue);
             border: 1px solid var(--main-blue);
+        }
+    }
+}
+
+.orderButton {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    button {
+        padding: 8px 20px;
+        @include cartTextSmall;
+        background-color: var(--main-blue);
+        color: var(--font-yellow);
+        font-family: var(--font-family-avenir);
+        border: 1px solid var(--main-yellow);
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+
+        .dotDiv {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: var(--main-yellow);
+            margin-bottom: 2px;
+        }
+    }
+}
+
+.orderMainButton {
+    display: flex;
+    align-items: center;
+
+    button {
+        min-width: 170px;
+        padding: 10px 30px;
+        @include buttonText;
+        background-color: transparent;
+        color: var(--font-blue);
+        font-family: var(--font-family-caudex);
+        border: 1px solid var(--main-blue);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        
+        &.active {
+            background-color: var(--main-blue);
+            color: var(--font-yellow);
+        }
+    }
+}
+
+.orderModalButton {
+    display: flex;
+    align-items: center;
+
+    button {
+        width: 100%;
+        padding: 10px 30px;
+        @include buttonText;
+        background-color: transparent;
+        color: var(--font-blue);
+        font-family: var(--font-family-caudex);
+        border: 1px solid var(--main-blue);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        
+        &.active {
+            cursor: default;
+            background-color: var(--main-blue);
+            color: var(--color-white);
+        }
+    }
+}
+
+.orderModalSave {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    border-top: 1px solid var(--border-color);
+
+    button {
+        padding: 6px 55px;
+        @include buttonText;
+        background-color: var(--main-blue);
+        color: var(--color-white);
+        font-family: var(--font-family-caudex);
+        border: 1px solid var(--main-blue);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: transparent;
+            color: var(--font-blue);
+        }
+    }
+}
+
+.viewCartButton {
+    button {
+        padding: 6px 55px;
+        @include buttonText;
+        background-color: var(--main-blue);
+        color: var(--color-white);
+        font-family: var(--font-family-caudex);
+        border: 1px solid var(--main-blue);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: transparent;
+            color: var(--font-blue);
+        }
+    }
+}
+
+.addToCart {
+    button {
+        width: 100%;
+        padding: 12px;
+        @include cartText;
+        background-color: var(--main-blue);
+        color: var(--color-white);
+        font-family: var(--font-family-caudex);
+        border: 1px solid var(--main-blue);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: transparent;
+            color: var(--font-blue);
         }
     }
 }

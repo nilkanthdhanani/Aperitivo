@@ -9,22 +9,22 @@ const cocktails = [
         items: [
             {
                 name: 'Bloody Cherry',
-                description: 'A bold blend of cherry and vodka with a hint of spice.',
+                description: 'A bold and daring cocktail featuring rich cherry flavors, premium vodka, and a tantalizing hint of spice for an unforgettable drink.',
                 price: '$10.50',
             },
             {
                 name: 'Magic Hour',
-                description: 'A tropical delight with mango, pineapple, and a splash of rum.',
+                description: 'A vibrant tropical medley of mango, pineapple, and a splash of rum, perfectly capturing the essence of a beachside sunset.',
                 price: '$11.00',
             },
             {
                 name: 'Tiki Taka',
-                description: 'A refreshing cocktail with lime, coconut, and a touch of tequila.',
+                description: 'A refreshing and exotic drink combining zesty lime, creamy coconut, and smooth tequila, delivering a delightful taste of the tropics.',
                 price: '$10.75',
             },
             {
                 name: 'Americana',
-                description: 'A classic mix of bourbon and bitters with a twist of orange.',
+                description: 'A timeless bourbon classic with bitters, accented by a fresh twist of orange for a bold, smooth finish.',
                 price: '$12.00',
             },
         ],
@@ -34,22 +34,22 @@ const cocktails = [
         items: [
             {
                 name: 'Pomelo Yuzu',
-                description: 'A tangy, citrus blend with pomelo and yuzu notes.',
+                description: 'An invigorating cocktail blending tangy pomelo and aromatic yuzu, delivering a vibrant citrus burst with every sip.',
                 price: '$10.25',
             },
             {
                 name: 'Lime Supreme',
-                description: 'An intense lime cocktail with gin and a hint of mint.',
+                description: 'A sophisticated lime-forward drink crafted with crisp gin and a cooling touch of mint for ultimate refreshment.',
                 price: '$10.75',
             },
             {
                 name: 'Ginger White',
-                description: 'A zesty mix of ginger, lime, and gin with a smooth finish.',
+                description: 'A zesty infusion of ginger, lime, and fine gin, elegantly balanced to provide a smooth, unforgettable finish.',
                 price: '$11.25',
             },
             {
                 name: 'Citrus Blend',
-                description: 'A refreshing blend of orange, lemon, and a hint of bitters.',
+                description: 'A lively fusion of orange, lemon, and aromatic bitters, creating a rejuvenating cocktail with a delightful tangy kick.',
                 price: '$10.50',
             },
         ],
@@ -59,22 +59,22 @@ const cocktails = [
         items: [
             {
                 name: 'Lavender Dew',
-                description: 'A soothing mix of lavender, lemon, and gin.',
+                description: 'A calming mix of fragrant lavender, zesty lemon, and crisp gin, delivering a truly elegant floral cocktail experience.',
                 price: '$10.75',
             },
             {
                 name: 'Lilly Rose',
-                description: 'A floral cocktail with rose water and vodka.',
+                description: 'A delicate floral drink featuring aromatic rose water paired with smooth vodka for a taste of refined sophistication.',
                 price: '$11.00',
             },
             {
                 name: 'Jasmin Edge',
-                description: 'A delicate blend of jasmine tea and rum with a hint of lemon.',
+                description: 'A harmonious combination of jasmine tea, refreshing lemon, and smooth rum, offering a unique and delicate flavor profile.',
                 price: '$11.50',
             },
             {
                 name: 'Spicy Blossom',
-                description: 'A unique mix of hibiscus and spice-infused tequila.',
+                description: 'An adventurous cocktail mixing hibiscus and spice-infused tequila for a bold, fiery twist on a floral classic.',
                 price: '$12.25',
             },
         ],
@@ -84,12 +84,12 @@ const cocktails = [
         items: [
             {
                 name: 'Triple Ace',
-                description: 'A crisp and bitter aperitivo with a hint of grapefruit.',
+                description: 'A sophisticated aperitivo blending crisp grapefruit bitterness with smooth herbal notes, perfect for a refreshing start to any evening.',
                 price: '$10.00',
             },
             {
                 name: 'Sunset Kit',
-                description: 'A smooth blend of prosecco and peach with a splash of lime.',
+                description: 'A smooth prosecco and peach blend with a touch of lime, embodying the charm of a perfect summer sunset.',
                 price: '$10.50',
             },
         ],
