@@ -48,6 +48,7 @@
 .orderButton {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
 
     button {
@@ -75,6 +76,7 @@
 .orderMainButton {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     button {
         min-width: 170px;
@@ -86,10 +88,14 @@
         border: 1px solid var(--main-blue);
         cursor: pointer;
         transition: all 0.3s ease-in-out;
-        
+
         &.active {
             background-color: var(--main-blue);
             color: var(--font-yellow);
+        }
+
+        @include breakpoint(sm-max) {
+            min-width: auto;
         }
     }
 }
@@ -97,6 +103,10 @@
 .orderModalButton {
     display: flex;
     align-items: center;
+
+    @include breakpoint(xs-max) {
+        flex-wrap: wrap;
+    }
 
     button {
         width: 100%;
@@ -108,7 +118,7 @@
         border: 1px solid var(--main-blue);
         cursor: pointer;
         transition: all 0.3s ease-in-out;
-        
+
         &.active {
             cursor: default;
             background-color: var(--main-blue);

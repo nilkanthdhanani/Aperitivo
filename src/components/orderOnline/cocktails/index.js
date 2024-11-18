@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import styles from './cocktails.module.scss'
 import Image from 'next/image'
@@ -138,6 +138,18 @@ export default function Cocktails() {
         setSelectedItem(null);
     };
 
+    useEffect(() => {
+        if (selectedItem) {
+            document.body.classList.add('scroll-off');
+        } else {
+            document.body.classList.remove('scroll-off');
+        }
+
+        return () => {
+            document.body.classList.remove('scroll-off');
+        };
+    }, [selectedItem]);
+
     return (
         <div className={styles.cocktails}>
             <div className={styles.container}>
@@ -152,11 +164,11 @@ export default function Cocktails() {
                             </Link>
                         ))}
                     </div>
-                    <div className={styles.viewCartButton}>
-                        <button type="button">
-                            View Cart <span>(6)</span>
-                        </button>
-                    </div>
+                    <Link href={"/cart"}>
+                        <div className={styles.viewCartButton}>
+                            <button type="button">View Cart <span>(6)</span></button>
+                        </div>
+                    </Link>
                 </div>
 
                 {cocktails.map((section) => (
@@ -186,7 +198,7 @@ export default function Cocktails() {
                 ))}
             </div>
             {selectedItem && (
-                <DetailModal isOpen={!!selectedItem} onClose={closeModal} item={selectedItem}/>
+                <DetailModal isOpen={!!selectedItem} onClose={closeModal} item={selectedItem} />
             )}
         </div>
     );
