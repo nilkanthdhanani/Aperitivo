@@ -97,7 +97,7 @@
                         max-width: 100px;
                         border: 1px solid var(--border-color);
                         display: flex;
-
+ 
                         button {
                             padding: 7px 10px;
                             background-color: transparent;
@@ -145,15 +145,6 @@
         }
 
         .orderSummary {
-            position: sticky;
-            max-height: fit-content;
-            top: 0;
-            left: 0;
-
-            @include breakpoint(lg-max) {
-                position: relative;
-            }
-
             h2 {
                 @include font24Light;
                 font-family: var(--font-family-caudex);
