@@ -95,6 +95,10 @@
                     justify-content: space-between;
                     gap: 20px;
 
+                    @include breakpoint(sm-max) {
+                        order: 2;
+                    }
+
                     h4 {
                         @include buttonText;
                         font-family: var(--font-family-caudex);
