@@ -1,0 +1,262 @@
+@import "../../../assets/styles/main.scss";
+
+.myCart {
+    margin-top: 100px;
+    padding: 60px 0;
+
+    @include breakpoint(sm-max) {
+        margin-top: 80px;
+        padding: 30px 0;
+    }
+
+    .myCartGrid {
+        display: grid;
+        grid-template-columns: 1fr 280px;
+        gap: 50px;
+        position: relative;
+
+        @include breakpoint(lg-max) {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .myCartContent {
+            h2 {
+                @include font24Light;
+                font-family: var(--font-family-caudex);
+                color: var(--font-blue);
+                padding-bottom: 20px;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .myCartItems {
+                padding: 20px 0;
+                border-bottom: 1px solid var(--border-color);
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                align-items: start;
+                gap: 20px;
+
+                @include breakpoint(sm-max) {
+                    grid-template-columns: 1fr;
+                }
+
+                .myCartItemsName {
+                    display: grid;
+                    grid-template-columns: 100px 1fr;
+                    gap: 20px;
+                    
+                    @include breakpoint(sm-max) {
+                        grid-template-columns: 100px 1fr auto;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        aspect-ratio: 1 / 1;
+                        border: 1px solid var(--border-color2);
+                        object-fit: cover;
+                    }
+
+                    h3,
+                    span {
+                        @include font16;
+                        font-family: var(--font-family-caudex);
+                        color: var(--font-blue-secondary);
+                    }
+
+                    h3 {
+                        margin-bottom: 15px;
+                    }
+
+                    span {
+                        display: block;
+                    }
+
+                    svg {
+                        display: none;
+
+                        @include breakpoint(sm-max) {
+                            display: block;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .myCartCalculate {
+                    display: grid;
+                    grid-template-columns: auto 1fr auto;
+                    align-items: center;
+                    gap: 20px;
+
+                    @include breakpoint(sm-max) {
+                        grid-template-columns: 100px 1fr;
+                    }
+
+                    .quantityButtons {
+                        max-width: 100px;
+                        border: 1px solid var(--border-color);
+                        display: flex;
+
+                        button {
+                            padding: 7px 10px;
+                            background-color: transparent;
+                            border: none;
+                            @include font16;
+                            cursor: pointer;
+                        }
+
+                        input {
+                            width: 100%;
+                            background-color: transparent;
+                            border: none;
+                            text-align: center;
+                            @include cartTextSmall;
+                            font-family: var(--font-family-caudex);
+                            color: var(--font-blue-secondary);
+
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+                    }
+
+                    span {
+                        text-align: center;
+                        display: block;
+                        @include font16;
+                        font-family: var(--font-family-caudex);
+                        color: var(--font-blue-secondary);
+
+                        @include breakpoint(sm-max) {
+                            text-align: right;
+                        }
+                    }
+
+                    svg {
+                        cursor: pointer;
+
+                        @include breakpoint(sm-max) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .orderSummary {
+            position: sticky;
+            max-height: fit-content;
+            top: 0;
+            left: 0;
+
+            @include breakpoint(lg-max) {
+                position: relative;
+            }
+
+            h2 {
+                @include font24Light;
+                font-family: var(--font-family-caudex);
+                color: var(--font-blue);
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid var(--border-color);
+
+                @include breakpoint(lg-max) {
+                    display: none;
+                }
+            }
+
+            .subTotalDiv {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+                margin-bottom: 15px;
+
+                h3,
+                span {
+                    @include font16;
+                    font-family: var(--font-family-caudex);
+                    color: var(--font-blue-secondary);
+                }
+
+                span {
+                    display: block;
+                }
+            }
+
+            .totalDiv {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+                margin-top: 20px;
+                border-top: 1px solid var(--border-color);
+                padding: 20px 0;
+
+                h3,
+                span {
+                    @include font20;
+                    font-family: var(--font-family-caudex);
+                    color: var(--font-blue-secondary);
+                }
+
+                span {
+                    display: block;
+                }
+            }
+
+            .secureDiv {
+                display: flex;
+                justify-content: center;
+                gap: 5px;
+                margin-top: 10px;
+
+                svg {
+                    margin-top: 2px;
+                }
+
+                p {
+                    @include font16;
+                    font-family: var(--font-family-avenir);
+                    color: var(--font-blue-secondary);
+                }
+            }
+
+            .enterAdd {
+                margin-bottom: 20px;
+
+                .promoCode {
+                    display: flex;
+                    gap: 7px;
+
+                    svg {
+                        margin-top: 2px;
+                    }
+
+                    p {
+                        @include font16;
+                        font-family: var(--font-family-caudex);
+                        color: var(--font-blue-secondary);
+                    }
+                }
+
+                input, textarea {
+                    width: 100%;
+                    padding: 10px;
+                    background-color: transparent;
+                    border: 1px solid var(--border-color);
+                    @include cartTextSmall;
+                    font-family: var(--font-family-caudex);
+                    color: var(--font-blue-secondary);
+                    margin-top: 10px;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}

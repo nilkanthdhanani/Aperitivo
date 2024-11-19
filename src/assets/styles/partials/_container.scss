@@ -11,3 +11,13 @@
         padding: 0 20px;
     }
 }
+
+.containerCart {
+    max-width: calc(1180px + 60px);
+    margin: 0 auto;
+    padding: 0 30px;
+
+    @include breakpoint("md-max") {
+        padding: 0 20px;
+    }
+}

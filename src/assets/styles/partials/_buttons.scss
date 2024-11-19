@@ -186,3 +186,22 @@
         }
     }
 }
+
+.checkoutButton {
+    button {
+        width: 100%;
+        padding: 12px;
+        @include buttonText;
+        background-color: var(--main-blue);
+        color: var(--color-white);
+        font-family: var(--font-family-caudex);
+        border: 1px solid var(--main-blue);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: transparent;
+            color: var(--font-blue);
+        }
+    }
+}
