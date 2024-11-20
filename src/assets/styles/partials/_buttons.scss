@@ -246,3 +246,27 @@
         }
     }
 }
+
+.googleSignup {
+    button {
+        width: 100%;
+        padding: 12px;
+        @include navText;
+        background-color: var(--color-white);
+        color: var(--font-blue);
+        font-family: var(--font-family-avenir);
+        border: 1.5px solid transparent;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        
+        &:hover {
+            border: 1.5px solid var(--border-color);
+        }
+    }
+}

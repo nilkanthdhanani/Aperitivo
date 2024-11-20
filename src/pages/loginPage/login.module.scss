@@ -2,6 +2,7 @@
 
 .login {
     width: 100%;
+    height: 100vh;
     position: relative;
     overflow: hidden;
     transition: 0.4s ease-in-out;
@@ -67,152 +68,33 @@
             height: auto;
             transform: translateY(100%);
         }
-        
+
         .loginDivContent {
             width: 100%;
             max-height: 100%;
             border-radius: 10px;
             padding: 50px 20px;
             overflow: auto;
-
-            .loginDivMain {
-                max-width: 400px;
-                margin: 0 auto;
-
-                .logo {
-                    display: flex;
-                    justify-content: center;
-                    margin-bottom: 30px;
-
-                    a {
-                        user-select: none;
-                        @include logoText;
-                        color: var(--font-blue);
-                        font-family: var(--font-family-caudex);
-
-                        @include breakpoint(md-max) {
-                            font-size: 30px;
-                            line-height: 40px;
-                        }
-                    }
-                }
-
-                form {
-                    .formInput,
-                    .formInput2 {
-                        margin-bottom: 24px;
-
-                        input {
-                            width: 100%;
-                            padding: 19px 20px;
-                            background-color: var(--color-white);
-                            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                            border-radius: 6px;
-                            border: none;
-                            @include font16;
-                            font-family: var(--font-family-avenir);
-                            color: var(--font-blue);
-
-                            &::-webkit-inner-spin-button {
-                                -webkit-appearance: none;
-                                margin: 0;
-                            }
-
-                            &:focus {
-                                outline: none;
-                            }
-                        }
-
-                        .inputRlMain {
-                            position: relative;
-                            width: 100%;
-                            height: 100%;
-
-                            .eyeicon {
-                                position: absolute;
-                                top: 50%;
-                                transform: translateY(-50%);
-                                right: 20px;
-
-                                img {
-                                    cursor: pointer;
-                                    display: block;
-                                    -moz-user-select: none;
-                                    -webkit-user-select: none;
-                                    -ms-user-select: none;
-                                    user-select: none;
-                                    -webkit-user-drag: none;
-                                    user-drag: none;
-                                    -webkit-touch-callout: none;
-                                }
-                            }
-                        }
-                    }
-
-                    .formInput2 {
-                        margin: 0;
-
-                        input {
-                            padding: 19px 45px 19px 20px;
-                        }
-                    }
-
-                    .fogotPasswordLink {
-                        display: flex;
-                        justify-content: end;
-                        align-items: end;
-                        margin-top: 15px;
-
-                        a {
-                            @include cartTextSmall;
-                            font-family: var(--font-family-avenir);
-                            color: var(--font-blue);
-                            transition: all 0.3s ease-in-out;
-
-                            &:hover {
-                                color: var(--font-red);
-                            }
-                        }
-                    }
-
-                    .signInButton {
-                        padding: 30px 0 0 0;
-
-                        p {
-                            margin-top: 15px;
-                            text-align: center;
-                            @include cartTextSmall;
-                            font-family: var(--font-family-avenir);
-                            color: var(--font-blue-secondary);
-
-                            a {
-                                color: var(--font-blue);
-                                transition: all 0.3s ease-in-out;
-
-                                &:hover {
-                                    color: var(--font-red);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
         }
     }
 
     &.active {
+        @include breakpoint("md-max") {
+            height: auto;
+        }
+
         .loginBanner {
             img {
                 width: 50%;
                 transition: 0.4s ease-in-out;
                 clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
-                
+
                 @include breakpoint("md-max") {
                     width: 100%;
                     clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
                 }
             }
-            
+
             @include breakpoint("md-max") {
                 transition: 0.4s ease-in-out;
                 height: 50vh;

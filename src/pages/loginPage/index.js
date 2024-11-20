@@ -4,8 +4,8 @@ import Image from 'next/image';
 import styles from './login.module.scss';
 
 import loginBg from '../../assets/images/webp/loginBg.jpg';
-import Link from 'next/link';
-import EyeIco from '@/assets/images/svg/eyeIco';
+import SignIn from '@/components/login/signIn';
+import SignUp from '@/components/login/signUp';
 
 export default function LoginPage() {
     const [isLoginActive, setIsLoginActive] = useState(false);
@@ -26,31 +26,8 @@ export default function LoginPage() {
             </div>
             <div className={styles.loginDiv}>
                 <div className={styles.loginDivContent}>
-                    <div className={styles.loginDivMain}>
-                        <div className={styles.logo}>
-                            <Link href={"/"}>Apéritivo</Link>
-                        </div>
-                        <form>
-                            <div className={styles.formInput}>
-                                <input type="text" placeholder="Enter username" required></input>
-                            </div>
-                            <div className={styles.formInput2}>
-                                <div className={styles.inputRlMain}>
-                                    <input type="password" placeholder="Password" required></input>
-                                    <div className={styles.eyeicon}>
-                                        <EyeIco />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={styles.fogotPasswordLink}>
-                                <Link href={"/"}>Forgot password?</Link>
-                            </div>
-                            <div className={styles.signInButton}>
-                                <button>Sign in</button>
-                                <p>Not a member? <Link href={"/"}>Register now</Link></p>
-                            </div>
-                        </form>
-                    </div>
+                    {/* <SignIn /> */}
+                    <SignUp />
                 </div>
             </div>
         </main>
