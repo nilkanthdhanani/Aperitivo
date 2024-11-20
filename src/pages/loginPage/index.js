@@ -26,8 +26,8 @@ export default function LoginPage() {
             </div>
             <div className={styles.loginDiv}>
                 <div className={styles.loginDivContent}>
-                    {/* <SignIn /> */}
-                    <SignUp />
+                    <SignIn />
+                    {/* <SignUp /> */}
                 </div>
             </div>
         </main>
