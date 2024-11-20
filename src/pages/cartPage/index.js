@@ -71,39 +71,41 @@ export default function CartPage() {
                             ))}
                         </div>
                         <div className={styles.orderSummary}>
-                            <h2>Order Summary</h2>
-                            <div className={styles.subTotalDiv}>
-                                <h3>Subtotal</h3>
-                                <span>${calculateSubtotal()}</span>
-                            </div>
-                            <div className={styles.subTotalDiv}>
-                                <h3>Pickup</h3>
-                                <span>FREE</span>
-                            </div>
-                            <div className={styles.totalDiv}>
-                                <h3>Total</h3>
-                                <span>${calculateSubtotal()}</span>
-                            </div>
-                            <div className={styles.enterAdd}>
-                                <div className={styles.promoCode}>
-                                    <PromoIco />
-                                    <p>Enter a promo code</p>
+                                <h2>Order Summary</h2>
+                            <div className={styles.orderSummaryDiv}>
+                                <div className={styles.subTotalDiv}>
+                                    <h3>Subtotal</h3>
+                                    <span>${calculateSubtotal()}</span>
                                 </div>
-                                <input type="text" />
-                            </div>
-                            <div className={styles.enterAdd}>
-                                <div className={styles.promoCode}>
-                                    <NoteIco />
-                                    <p>Add a note</p>
+                                <div className={styles.subTotalDiv}>
+                                    <h3>Pickup</h3>
+                                    <span>FREE</span>
                                 </div>
-                                <textarea rows={4}></textarea>
-                            </div>
-                            <div className={styles.checkoutButton}>
-                                <button type="button">Checkout</button>
-                            </div>
-                            <div className={styles.secureDiv}>
-                                <LockIco />
-                                <p>Secure Checkout</p>
+                                <div className={styles.totalDiv}>
+                                    <h3>Total</h3>
+                                    <span>${calculateSubtotal()}</span>
+                                </div>
+                                <div className={styles.enterAdd}>
+                                    <div className={styles.promoCode}>
+                                        <PromoIco />
+                                        <p>Enter a promo code</p>
+                                    </div>
+                                    <input type="text" />
+                                </div>
+                                <div className={styles.enterAdd}>
+                                    <div className={styles.promoCode}>
+                                        <NoteIco />
+                                        <p>Add a note</p>
+                                    </div>
+                                    <textarea rows={4}></textarea>
+                                </div>
+                                <div className={styles.checkoutButton}>
+                                    <button type="button">Checkout</button>
+                                </div>
+                                <div className={styles.secureDiv}>
+                                    <LockIco />
+                                    <p>Secure Checkout</p>
+                                </div>
                             </div>
                         </div>
                     </div>

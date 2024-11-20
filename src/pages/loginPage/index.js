@@ -43,11 +43,11 @@ export default function LoginPage() {
                                 </div>
                             </div>
                             <div className={styles.fogotPasswordLink}>
-                                <Link href={"/Resetpassword"}>Forgot password?</Link>
+                                <Link href={"/"}>Forgot password?</Link>
                             </div>
                             <div className={styles.signInButton}>
                                 <button>Sign in</button>
-                                <p>Don’t have an account? <Link href={"/signup"}>Sign up</Link></p>
+                                <p>Not a member? <Link href={"/"}>Register now</Link></p>
                             </div>
                         </form>
                     </div>

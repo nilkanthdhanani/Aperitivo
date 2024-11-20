@@ -192,16 +192,16 @@
         width: 100%;
         padding: 12px;
         @include buttonText;
-        background-color: var(--main-blue);
-        color: var(--color-white);
+        background-color: var(--main-yellow);
+        color: var(--font-blue);
         font-family: var(--font-family-caudex);
-        border: 1px solid var(--main-blue);
+        border: 1px solid var(--main-yellow);
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 
         &:hover {
             background-color: transparent;
-            color: var(--font-blue);
+            color: var(--font-yellow);
         }
     }
 }
