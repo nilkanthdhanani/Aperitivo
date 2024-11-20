@@ -1,165 +1,85 @@
 @import "../../assets/styles/main.scss";
 
-.signinDivMain {
-    max-width: 400px;
-    margin: 0 auto;
+form {
+    .formInput,
+    .formInput2 {
+        margin-bottom: 24px;
 
-    .logo {
+        input {
+            width: 100%;
+            padding: 19px 20px;
+            background-color: var(--color-white);
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 6px;
+            border: 1.5px solid transparent;
+            @include font16;
+            font-family: var(--font-family-avenir);
+            color: var(--font-blue);
+            transition: all 0.3s ease-in-out;
+
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                border: 1.5px solid var(--border-color);
+            }
+        }
+
+        .inputRlMain {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            .eyeicon {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 20px;
+
+                img {
+                    cursor: pointer;
+                    display: block;
+                    -moz-user-select: none;
+                    -webkit-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    -webkit-user-drag: none;
+                    user-drag: none;
+                    -webkit-touch-callout: none;
+                }
+            }
+        }
+    }
+
+    .formInput2 {
+        margin: 0;
+
+        input {
+            padding: 19px 45px 19px 20px;
+        }
+    }
+
+    .fogotPasswordLink {
         display: flex;
-        justify-content: center;
-        margin-bottom: 30px;
+        justify-content: end;
+        align-items: end;
+        margin-top: 15px;
 
         a {
-            user-select: none;
-            @include logoText;
-            color: var(--font-blue);
-            font-family: var(--font-family-caudex);
-
-            @include breakpoint(md-max) {
-                font-size: 30px;
-                line-height: 40px;
-            }
-        }
-    }
-
-    form {
-        .formInput,
-        .formInput2 {
-            margin-bottom: 24px;
-
-            input {
-                width: 100%;
-                padding: 19px 20px;
-                background-color: var(--color-white);
-                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                border-radius: 6px;
-                border: 1.5px solid transparent;
-                @include font16;
-                font-family: var(--font-family-avenir);
-                color: var(--font-blue);
-                transition: all 0.3s ease-in-out;
-
-                &::-webkit-inner-spin-button {
-                    -webkit-appearance: none;
-                    margin: 0;
-                }
-
-                &:focus {
-                    outline: none;
-                }
-        
-                &:hover {
-                    border: 1.5px solid var(--border-color);
-                }
-            }
-
-            .inputRlMain {
-                position: relative;
-                width: 100%;
-                height: 100%;
-
-                .eyeicon {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    right: 20px;
-
-                    img {
-                        cursor: pointer;
-                        display: block;
-                        -moz-user-select: none;
-                        -webkit-user-select: none;
-                        -ms-user-select: none;
-                        user-select: none;
-                        -webkit-user-drag: none;
-                        user-drag: none;
-                        -webkit-touch-callout: none;
-                    }
-                }
-            }
-        }
-
-        .formInput2 {
-            margin: 0;
-
-            input {
-                padding: 19px 45px 19px 20px;
-            }
-        }
-
-        .fogotPasswordLink {
-            display: flex;
-            justify-content: end;
-            align-items: end;
-            margin-top: 15px;
-
-            a {
-                @include cartTextSmall;
-                font-family: var(--font-family-avenir);
-                color: var(--font-blue);
-                transition: all 0.3s ease-in-out;
-
-                &:hover {
-                    color: var(--font-red);
-                }
-            }
-        }
-
-        .signInButton {
-            padding: 30px 0 0 0;
-
-            p {
-                margin-top: 15px;
-                text-align: center;
-                @include cartTextSmall;
-                font-family: var(--font-family-avenir);
-                color: var(--font-blue-secondary);
-
-                a {
-                    color: var(--font-blue);
-                    transition: all 0.3s ease-in-out;
-
-                    &:hover {
-                        color: var(--font-red);
-                    }
-                }
-            }
-        }
-    }
-
-    .orLine {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 20px 0;
-        position: relative;
-        
-        &:before,
-        &:after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            bottom: 0;
-            width: 46%;
-            border-top: 1px solid var(--border-color2);
-        }
-
-        &:before {
-            left: 0;
-        }
-
-        &:after {
-            right: 0;
-        }
-
-        span {
             @include cartTextSmall;
             font-family: var(--font-family-avenir);
-            color: var(--border-color2);
+            color: var(--font-blue);
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: var(--font-red);
+            }
         }
-    }
-
-    .googleSignup {
-
     }
 }

@@ -78,6 +78,80 @@
             border-radius: 10px;
             padding: 50px 20px;
             overflow: auto;
+
+            .loginDivMain {
+                max-width: 400px;
+                margin: 0 auto;
+                
+                .logo {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 30px;
+
+                    a {
+                        user-select: none;
+                        @include logoText;
+                        color: var(--font-blue);
+                        font-family: var(--font-family-caudex);
+
+                        @include breakpoint(md-max) {
+                            font-size: 30px;
+                            line-height: 40px;
+                        }
+                    }
+                }
+
+                .navigationDiv {
+                    p {
+                        margin-top: 15px;
+                        text-align: center;
+                        @include cartTextSmall;
+                        font-family: var(--font-family-avenir);
+                        color: var(--font-blue-secondary);
+
+                        a {
+                            color: var(--font-blue);
+                            transition: all 0.3s ease-in-out;
+
+                            &:hover {
+                                color: var(--font-red);
+                            }
+                        }
+                    }
+                }
+
+                .orLine {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 20px 0;
+                    position: relative;
+
+                    &:before,
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        bottom: 0;
+                        width: 46%;
+                        border-top: 1px solid var(--border-color2);
+                    }
+
+                    &:before {
+                        left: 0;
+                    }
+
+                    &:after {
+                        right: 0;
+                    }
+
+                    span {
+                        @include cartTextSmall;
+                        font-family: var(--font-family-avenir);
+                        color: var(--border-color2);
+                    }
+                }
+            }
         }
     }
 
