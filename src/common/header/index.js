@@ -46,9 +46,9 @@ export default function Header() {
   const handleScroll = () => {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
     if (scrollTop > lastScrollTop) {
-      setShowHeader(false); // Hide header on scroll down
+      setShowHeader(false);
     } else {
-      setShowHeader(true); // Show header on scroll up
+      setShowHeader(true);
     }
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   };

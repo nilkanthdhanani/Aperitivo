@@ -205,3 +205,44 @@
         }
     }
 }
+
+.loginBannerUpper {
+    button {
+        padding: 10px 30px;
+        @include buttonText;
+        background-color: var(--color-white);
+        color: var(--font-blue);
+        font-family: var(--font-family-avenir);
+        border: 2px solid var(--color-white);
+        border-radius: 999px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: transparent;
+            color: var(--color-white);
+        }
+    }
+}
+
+.signInButton {
+    button {
+        width: 100%;
+        padding: 12px;
+        @include buttonText;
+        background-color: var(--main-blue);
+        color: var(--color-white);
+        font-family: var(--font-family-caudex);
+        border: 1.5px solid var(--main-blue);
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: transparent;
+            box-shadow: none;
+            color: var(--font-blue);
+        }
+    }
+}
