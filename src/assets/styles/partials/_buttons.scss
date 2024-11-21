@@ -225,9 +225,10 @@
     }
 }
 
-.signInButton {
-    padding: 30px 0 0 0;
-    
+.signInButton,
+.nextStep {
+    margin: 30px 0 0 0;
+
     button {
         width: 100%;
         padding: 12px;
@@ -266,7 +267,7 @@
         gap: 10px;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
-        
+
         &:hover {
             border: 1.5px solid var(--border-color);
         }

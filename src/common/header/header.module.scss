@@ -4,7 +4,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9;
+    z-index: 99;
     width: 100%;
     background-color: var(--color-white);
     padding: 24px 0;
@@ -133,9 +133,9 @@
   
         .menuIcon {
           position: fixed;
-          top: 24px;
+          top: 25px;
           right: 10px;
-          z-index: 99;
+          z-index: 100;
           display: none;
           cursor: pointer;
           width: 55px;

@@ -70,6 +70,20 @@
             width: 100%;
             height: auto;
             transform: translateY(100%);
+            flex-direction: column;
+        }
+
+        .loginDivImage {
+            display: none;
+            width: 100%;
+            min-height: 50vh;
+            background-image: url("../../assets/images/webp/loginBg.jpg");
+            background-size: cover;
+            clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+
+            @include breakpoint("md-max") {
+                display: block;
+            }
         }
 
         .loginDivContent {
@@ -78,80 +92,6 @@
             border-radius: 10px;
             padding: 50px 20px;
             overflow: auto;
-
-            .loginDivMain {
-                max-width: 400px;
-                margin: 0 auto;
-                
-                .logo {
-                    display: flex;
-                    justify-content: center;
-                    margin-bottom: 30px;
-
-                    a {
-                        user-select: none;
-                        @include logoText;
-                        color: var(--font-blue);
-                        font-family: var(--font-family-caudex);
-
-                        @include breakpoint(md-max) {
-                            font-size: 30px;
-                            line-height: 40px;
-                        }
-                    }
-                }
-
-                .navigationDiv {
-                    p {
-                        margin-top: 15px;
-                        text-align: center;
-                        @include cartTextSmall;
-                        font-family: var(--font-family-avenir);
-                        color: var(--font-blue-secondary);
-
-                        a {
-                            color: var(--font-blue);
-                            transition: all 0.3s ease-in-out;
-
-                            &:hover {
-                                color: var(--font-red);
-                            }
-                        }
-                    }
-                }
-
-                .orLine {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 20px 0;
-                    position: relative;
-
-                    &:before,
-                    &:after {
-                        content: "";
-                        position: absolute;
-                        top: 50%;
-                        bottom: 0;
-                        width: 46%;
-                        border-top: 1px solid var(--border-color2);
-                    }
-
-                    &:before {
-                        left: 0;
-                    }
-
-                    &:after {
-                        right: 0;
-                    }
-
-                    span {
-                        @include cartTextSmall;
-                        font-family: var(--font-family-avenir);
-                        color: var(--border-color2);
-                    }
-                }
-            }
         }
     }
 
@@ -165,16 +105,10 @@
                 width: 50%;
                 transition: 0.4s ease-in-out;
                 clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
-
-                @include breakpoint("md-max") {
-                    width: 100%;
-                    clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
-                }
             }
 
             @include breakpoint("md-max") {
-                transition: 0.4s ease-in-out;
-                height: 50vh;
+                display: none;
             }
 
             .loginBannerUpper {
@@ -188,8 +122,8 @@
             transition-delay: 0.3s;
 
             @include breakpoint("md-max") {
+                transition-delay: unset;
                 left: 0;
-                height: auto;
                 transform: translateY(0);
             }
         }

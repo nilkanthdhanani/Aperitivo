@@ -1,4 +1,4 @@
-import styles from './signIn.module.scss'
+import styles from './loginMain.module.scss'
 
 import EyeIco from '@/assets/images/svg/eyeIco';
 
@@ -6,17 +6,18 @@ export default function SignUp() {
     return (
         <form>
             <div className={styles.formInput}>
-                <input type="text" placeholder="Name" required></input>
+                <input type="text" placeholder="" required></input>
+                <label htmlFor="username">Name</label>
             </div>
             <div className={styles.formInput}>
-                <input type="email" placeholder="Email" required></input>
+                <input type="email" placeholder="" required></input>
+                <label htmlFor="username">Email</label>
             </div>
             <div className={styles.formInput2}>
-                <div className={styles.inputRlMain}>
-                    <input type="password" placeholder="Password" required></input>
-                    <div className={styles.eyeicon}>
-                        <EyeIco />
-                    </div>
+                <input type="password" id="password" placeholder=" " required />
+                <label htmlFor="password">Password</label>
+                <div className={styles.eyeicon}>
+                    <EyeIco />
                 </div>
             </div>
             <div className={styles.signInButton}>

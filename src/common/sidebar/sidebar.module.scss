@@ -8,7 +8,7 @@
     top: 0;
     right: -100%;
     transition: 0.3s ease-in-out;
-    z-index: 9;
+    z-index: 99;
 
     &.active {
         right: 0;
