@@ -11,4 +11,44 @@
     @include breakpoint(md-max) {
         display: block;
     }
+
+    .topButtonText {
+        position: absolute;
+        width: min-content;
+        top: 50%;
+        left: -95px;
+        transform: translateY(-50%);
+
+        span {
+            display: none;
+            white-space: nowrap;
+            @include font12;
+            font-family: var(--font-family-caudex);
+            color: var(--color-white);
+            background-color: var(--main-blue);
+            padding: 3px 10px;
+            border-radius: 4px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                margin-top: 3px;
+                margin-left: 10px;
+                border-top: 6px solid transparent;
+                border-left: 9px solid var(--main-blue);
+                border-bottom: 6px solid transparent;
+            }
+        }
+    }
+
+    &:hover {
+        .topButtonText {
+            span {
+                // display: block;
+            }
+        }
+    }
 }

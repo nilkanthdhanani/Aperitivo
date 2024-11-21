@@ -20,10 +20,8 @@ export default function TopButton() {
             const currentScrollY = window.scrollY;
 
             if (currentScrollY < lastScrollY) {
-                // Show when scrolling up
                 setIsVisible(true);
             } else {
-                // Hide when scrolling down
                 setIsVisible(false);
             }
 
@@ -41,6 +39,9 @@ export default function TopButton() {
         isVisible && (
             <div className={styles.topButton} onClick={scrollToTop}>
                 <TopIcon />
+                <div className={styles.topButtonText}>
+                    <span>Scroll to top</span>
+                </div>
             </div>
         )
     );

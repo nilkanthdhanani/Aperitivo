@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from './loginMain.module.scss';
 
-import Link from 'next/link';
 import EyeIco from '@/assets/images/svg/eyeIco';
 import ForgotPass from './forgotPass';
 

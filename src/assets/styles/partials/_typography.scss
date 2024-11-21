@@ -1,4 +1,10 @@
 
+@mixin font12 {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
 @mixin cartTextSmall {
     font-size: 14px;
     line-height: 20px;
