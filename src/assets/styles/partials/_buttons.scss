@@ -11,7 +11,7 @@
         background-color: var(--main-blue);
         color: var(--font-yellow);
         font-family: var(--font-family-avenir);
-        border: 1px solid transparent;
+        border: 1.5px solid var(--main-blue);
         border-radius: 999px;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
@@ -19,7 +19,6 @@
         &:hover {
             background-color: transparent;
             color: var(--font-blue);
-            border: 1px solid var(--main-blue);
         }
     }
 }
@@ -32,7 +31,7 @@
         background-color: var(--main-blue);
         color: var(--font-yellow);
         font-family: var(--font-family-avenir);
-        border: 1px solid transparent;
+        border: 1.5px solid var(--main-blue);
         border-radius: 999px;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
@@ -40,7 +39,6 @@
         &:hover {
             background-color: transparent;
             color: var(--font-blue);
-            border: 1px solid var(--main-blue);
         }
     }
 }
@@ -85,7 +83,7 @@
         background-color: transparent;
         color: var(--font-blue);
         font-family: var(--font-family-caudex);
-        border: 1px solid var(--main-blue);
+        border: 1.5px solid var(--main-blue);
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 
@@ -115,7 +113,7 @@
         background-color: transparent;
         color: var(--font-blue);
         font-family: var(--font-family-caudex);
-        border: 1px solid var(--main-blue);
+        border: 1.5px solid var(--main-blue);
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 
@@ -139,7 +137,7 @@
         background-color: var(--main-blue);
         color: var(--color-white);
         font-family: var(--font-family-caudex);
-        border: 1px solid var(--main-blue);
+        border: 1.5px solid var(--main-blue);
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 
@@ -157,7 +155,7 @@
         background-color: var(--main-blue);
         color: var(--color-white);
         font-family: var(--font-family-caudex);
-        border: 1px solid var(--main-blue);
+        border: 1.5px solid var(--main-blue);
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 
@@ -176,7 +174,7 @@
         background-color: var(--main-blue);
         color: var(--color-white);
         font-family: var(--font-family-caudex);
-        border: 1px solid var(--main-blue);
+        border: 1.5px solid var(--main-blue);
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 
@@ -269,7 +267,7 @@
         transition: all 0.3s ease-in-out;
 
         &:hover {
-            border: 1.5px solid var(--border-color);
+            border: 1.5px solid var(--border-color);    
         }
     }
 }
