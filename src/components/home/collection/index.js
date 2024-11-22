@@ -14,17 +14,14 @@ const fixture = [
     {
         img: cocktail1,
         title: 'Oldies Remix',
-        link: '/'
     },
     {
         img: cocktail2,
         title: 'Bitter Galore',
-        link: '/'
     },
     {
         img: cocktail3,
         title: 'Floral Fusion',
-        link: '/'
     },
 ]
 
@@ -53,7 +50,7 @@ export default function Collection() {
                             </div>
                             <div className={styles.collectionGridItem}>
                                 <h3>{item.title}</h3>
-                                <Link href={item.link}>See All</Link>
+                                <Link href={"/our-cocktails"}>See All</Link>
                             </div>
                         </div>
                     ))}
