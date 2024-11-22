@@ -12,7 +12,7 @@ export default function Friends() {
 
     useEffect(() => {
         Aos.init({
-            duration: 1000,
+              duration: 2000,
             once: false,
           });
           Aos.refresh();

@@ -19,7 +19,7 @@ export default function HeroBanner() {
 
   useEffect(() => {
     Aos.init({
-      duration: 1000,
+        duration: 2000,
       once: false,
     });
     Aos.refresh();

@@ -1,10 +1,21 @@
 'use client';
-
-import { useState } from 'react';
-import InputErrorIco from '@/assets/images/svg/inputErrorIco';
 import styles from './contact.module.scss';
+import { useEffect, useState } from 'react';
+
+import InputErrorIco from '@/assets/images/svg/inputErrorIco';
+
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Contact() {
+    useEffect(() => {
+      Aos.init({
+        duration: 2000,
+        once: false,
+      });
+      Aos.refresh();
+    }, []);
+  
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -56,7 +67,7 @@ export default function Contact() {
 
     return (
         <section className={styles.contact} id='contact'>
-            <div className={styles.contactDiv1}>
+            <div className={styles.contactDiv1} data-aos="fade-up">
                 <h2>Custom Services</h2>
                 <p>Tailor your cocktail experience with our custom services, designed to meet your unique taste and event preferences.</p>
             </div>
