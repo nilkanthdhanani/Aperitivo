@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
         <title>Apéritivo | Buy Cocktails Online, Buy Spirits Online</title>
         <meta name="description" content="Buy Cocktails Online, Buy Spirits Online" />
         <link rel="icon" href="./favicon.ico" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       </head>
       <body className={inter.className}>
         {/* <CustomCursor /> */}
@@ -31,6 +32,10 @@ export default function RootLayout({ children }) {
         {children}
         {!hideLayout && <Footer />}
         {!hideLayout && <TopButton />}
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
       </body>
     </html>
   );

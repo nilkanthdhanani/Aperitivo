@@ -8,10 +8,21 @@ import heroImg5 from '@/assets/images/webp/heroImg5.webp';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 export default function HeroBanner() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-out-cubic",
+      once: false,
+    });
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,7 +52,7 @@ export default function HeroBanner() {
         backgroundPositionY: `${scrollPosition}px`,
       }}
     >
-      <div className={styles.heroBannerContent}>
+      <div className={styles.heroBannerContent} data-aos="fade-down">
         <div className={styles.heroBannerInner}>
           <div
             className={`${styles.heroBannerImage} ${isFading ? styles.fadeOut : styles.fadeIn
