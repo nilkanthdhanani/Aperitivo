@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import styles from './login.module.scss';
 
-import loginBg from '../../assets/images/webp/loginBg.jpg';
+import loginBg from '../../assets/images/webp/loginBg.webp';
 import LoginMain from '@/components/login';
 
 export default function LoginPage() {
