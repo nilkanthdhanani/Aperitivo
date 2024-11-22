@@ -5,17 +5,17 @@ import Link from 'next/link';
 
 import cheers from '@/assets/images/gif/cheers.gif';
 
-import AOS from 'aos';
+import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 export default function Friends() {
 
     useEffect(() => {
-        AOS.init({
-            duration: 3000,
-            easing: "ease-out-cubic",
+        Aos.init({
+            duration: 1000,
             once: false,
-        });
+          });
+          Aos.refresh();
     }, []);
 
     return (

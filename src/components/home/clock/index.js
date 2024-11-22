@@ -5,17 +5,17 @@ import AddIceIco from '@/assets/images/svg/addIceIco';
 import ChooseMixIco from '@/assets/images/svg/chooseMixIco';
 import PlaceOrderIco from '@/assets/images/svg/placeOrderIco';
 
-import AOS from 'aos';
+import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 export default function Clock() {
 
   useEffect(() => {
-      AOS.init({
-          duration: 3000,
-          easing: "ease-out-cubic",
-          once: false,
-      });
+    Aos.init({
+      duration: 1000,
+      once: false,
+    });
+    Aos.refresh();
   }, []);
 
   return (

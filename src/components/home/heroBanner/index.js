@@ -9,7 +9,7 @@ import heroImg3 from '@/assets/images/webp/heroImg3.webp';
 import heroImg4 from '@/assets/images/webp/heroImg4.webp';
 import heroImg5 from '@/assets/images/webp/heroImg5.webp';
 
-import AOS from 'aos';
+import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 export default function HeroBanner() {
@@ -18,11 +18,11 @@ export default function HeroBanner() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
-    AOS.init({
-      duration: 3000,
-      easing: "ease-out-cubic",
+    Aos.init({
+      duration: 1000,
       once: false,
     });
+    Aos.refresh();
   }, []);
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export default function HeroBanner() {
   }, []);
 
   return (
-    <section className={styles.heroBanner} style={{backgroundPositionY: `${scrollPosition}px`,}}>
+    <section className={styles.heroBanner} style={{ backgroundPositionY: `${scrollPosition}px`, }}>
       <div className={styles.heroBannerContent}>
         <div className={styles.heroBannerInner}>
           <div className={`${styles.heroBannerImage} ${isFading ? styles.fadeOut : styles.fadeIn}`}>

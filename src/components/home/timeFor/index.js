@@ -1,19 +1,19 @@
 import { useEffect } from 'react';
 import styles from './timeFor.module.scss';
 
-import AOS from 'aos';
+import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 export default function TimeFor() {
 
     useEffect(() => {
-        AOS.init({
-            duration: 3000,
-            easing: "ease-out-cubic",
+        Aos.init({
+            duration: 1000,
             once: false,
-        });
+          });
+          Aos.refresh();
     }, []);
-    
+
     return (
         <section className={styles.timeFor}>
             <div className={styles.timeForDiv1}></div>

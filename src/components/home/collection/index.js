@@ -7,7 +7,7 @@ import cocktail1 from '@/assets/images/webp/cocktail1.webp';
 import cocktail2 from '@/assets/images/webp/cocktail2.webp';
 import cocktail3 from '@/assets/images/webp/cocktail3.webp';
 
-import AOS from 'aos';
+import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 const fixture = [
@@ -31,11 +31,11 @@ const fixture = [
 export default function Collection() {
 
     useEffect(() => {
-        AOS.init({
-            duration: 3000,
-            easing: "ease-out-cubic",
+        Aos.init({
+            duration: 1000,
             once: false,
-        });
+          });
+          Aos.refresh();
     }, []);
 
     return (
