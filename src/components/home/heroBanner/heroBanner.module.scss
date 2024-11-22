@@ -23,6 +23,7 @@
         margin: 0 auto;
         display: grid;
         grid-template-columns: 535px 1fr;
+        overflow: hidden;
 
         @include breakpoint(lg-max) {
             grid-template-columns: 1fr;

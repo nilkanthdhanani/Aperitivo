@@ -1,4 +1,4 @@
-import styles from './cockTailBg1.module.scss'
+import styles from './cockTailBg1.module.scss';
 
 export default function CockTailBg1() {
   return (
