@@ -12,7 +12,7 @@ export default function Clock() {
 
   useEffect(() => {
       AOS.init({
-          duration: 2000,
+          duration: 3000,
           easing: "ease-out-cubic",
           once: false,
       });
